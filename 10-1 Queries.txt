@@ -1,0 +1,23 @@
+CREATE SCHEMA `bank` ;
+
+------
+
+CREATE TABLE `bank`.`customer` (
+  `c_id` VARCHAR(10) NOT NULL,
+  `cname` VARCHAR(20) NULL,
+  `mno` INT NULL,
+  `address` VARCHAR(30) NULL,
+  `city` VARCHAR(10) NULL,
+  PRIMARY KEY (`c_id`),
+  UNIQUE INDEX `c_id_UNIQUE` (`c_id` ASC) VISIBLE);
+
+-----
+
+ALTER TABLE bank.customer ADD DOB DATE NULL;
+
+ALTER TABLE bank.customer MODIFY COLUMN address varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL;
+
+-----
+
+---  For later assignments
+CHECK (=)
